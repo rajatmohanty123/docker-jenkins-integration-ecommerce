@@ -55,7 +55,7 @@ public class UserController {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRoles(Arrays.asList(roleDAO.findByName("ROLE_USER")));
         userDAO.add(user);
-        return new ResponseEntity<>("User added", HttpStatus.OK);
+        return new ResponseEntity<>("User added Successfully", HttpStatus.OK);
     }
 
     @GetMapping("/{name}")
